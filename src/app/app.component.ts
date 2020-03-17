@@ -14,6 +14,13 @@ import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms'
 // test@test.com
 // 
 
+
+// forms
+// http
+// sessions/security
+// Model lifecycle (CRUD)
+// create,read,update,delete
+
 export class AppComponent {
 
   title = 'training'
