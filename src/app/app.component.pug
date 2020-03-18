@@ -1,48 +1,72 @@
-//- .container
-//-   .row
-//-     .col-md-3.col-md-push-3
-//-       table.table
-//-         tbody
-//-           tr(*ngFor="let user of collection")
-//-             td {{user.firstName}}
+.container
+  .row
+    .col-md-4
+      .card.bg-light
+        .card-body.mx-auto
+          h4.card-title.mt-3.text-center Create Account
+          p.text-center Get started with your free account
+          
+          form([formGroup]="form")
+            div.alert.alert-danger(*ngIf="errors.length > 0")
+              p(*ngFor="let error of errors") {{ errors }}
+              
+            .form-group.input-group
+              input.form-control(name="",
+                placeholder="First Name",
+                formControlName="firstName",
+                [class.error]="form.controls.firstName.touched && form.controls.firstName.invalid",
+                type="text")
+
+            .form-group.input-group
+              input.form-control(name="",
+                placeholder="Last Name",
+                formControlName="lastName",
+                [class.error]="form.controls.lastName.touched && form.controls.lastName.invalid",
+                type="text")
 
 
-.card.bg-light
-  .card-body.mx-auto(style="max-width: 400px;")
-    h4.card-title.mt-3.text-center Create Account
-    p.text-center Get started with your free account
-    
-    form([formGroup]="form")
-      .form-group.input-group
-        input.form-control(name="",
-          placeholder="First Name",
-          formControlName="firstName",
-          type="text")
-
-      .form-group.input-group
-        input.form-control(name="",
-          placeholder="Last Name",
-          formControlName="lastName",
-          type="text")
+            .form-group.input-group
+              input.form-control(name="",
+                placeholder="Email",
+                formControlName="email",
+                [class.error]="form.controls.email.touched && form.controls.email.invalid",
+                type="email")
 
 
-      .form-group.input-group
-        input.form-control(name="",
-          placeholder="Email",
-          formControlName="email",
-          type="email")
+            .form-group.input-group
+              input.form-control(name="",
+                placeholder="Password",
+                formControlName="password",
+                [class.error]="form.controls.password.touched && form.controls.password.invalid",
+                type="password")
 
 
-      .form-group.input-group
-        input.form-control(name="",
-          placeholder="Password",
-          formControlName="password",
-          type="password")
+            p.text-center
+              button.btn.btn-primary(
+                (click)="submitForm()",
+                [disabled]="!form.valid") Register
 
-
-      p.text-center
-        | Have an account? 
-        button.btn.btn-primary(
-          (click)="submitForm()",
-          [disabled]="!form.valid") Log In
-
+    .col-md-8
+      table.table
+        thead
+          tr
+            th ID
+            th First Name
+            th Last Name
+            th Email
+            th Password
+            th
+            th
+        tbody
+          tr(*ngIf="users.length == 0")
+            td No Users Available
+          tr(*ngFor="let user of users;  let i = index")
+            td {{ user.id }}
+            td {{ user.firstName }}
+            td {{ user.lastName }}
+            td {{ user.email }}
+            td {{ user.password }}
+            td
+              a((click)="delete(i)") Delete
+            td
+              a((click)="update(user,index)") Update
