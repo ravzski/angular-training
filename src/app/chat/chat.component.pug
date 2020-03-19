@@ -1,0 +1,16 @@
+.container.clearfix
+  #people-list.people-list
+    thread-list(
+      [threads]="threads",
+      [currentThread]="currentThread",
+      (updateThread)="updateThread($event)")
+    
+  .chat
+    message-list(
+      [currentThread]="currentThread",
+      [currentUser]="currentUser")
+
+    message-form(
+      [currentUser]="currentUser",
+      (addMessage)="addMessage($event)"
+    )

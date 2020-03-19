@@ -1,0 +1,8 @@
+.chat-message.clearfix
+  form([formGroup]="form")
+    textarea#message-to-send(name="message-to-send",
+      formControlName="message"
+      placeholder="Type your message" rows="3")
+    i.fa.fa-file-o
+    i.fa.fa-file-image-o
+    button((click)="submit()", [disabled]="form.invalid") Send

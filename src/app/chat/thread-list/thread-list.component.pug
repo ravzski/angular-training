@@ -1,0 +1,13 @@
+.search
+  input(type="text" placeholder="search")
+  i.fa.fa-search
+ul.list
+  li.clearfix(*ngFor="let thread of threads",
+    (click)="setThread(thread)",
+    [ngClass]="getThreadClass(thread)")
+    img([src]="thread.user.img" alt="avatar")
+    .about
+      .name {{thread.user.name}}
+      .status
+        i.fa.fa-circle.online
+        |  {{thread.user.status}}

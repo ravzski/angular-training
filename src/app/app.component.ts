@@ -23,6 +23,11 @@ import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms'
 // CRUD
 // create,read,update,delete
 
+// components, http <--connect na tayo sa backend
+// sessions
+
+// gawa tayo ng admin from scratch HTML,CSS without bootstrap
+
 export class AppComponent {
 
   title = 'training'
@@ -42,7 +47,6 @@ export class AppComponent {
 
   buildForm() {
     this.form = this.fb.group({
-      id: [this.currentIndex],
       lastName: ['', [Validators.required, , Validators.minLength(2)]],
       firstName: ['', [Validators.required, , Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],

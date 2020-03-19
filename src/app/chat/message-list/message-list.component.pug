@@ -1,0 +1,16 @@
+.chat-header.clearfix
+  img([src]="currentThread.user.img" alt="avatar")
+  .chat-about
+    .chat-with Chat with {{currentThread.user.name}}
+    .chat-num-messages already with {{currentThread.messages.length}} messages
+  i.fa.fa-star
+
+.chat-history
+  ul
+    li(*ngFor="let message of currentThread.messages")
+      .message-data.align-right
+        span.message-data-time {{message.date}}
+        span.message-data-name {{message.creator}}
+        i.fa.fa-circle.me
+      .message([ngClass]="getMessageClass(message)")
+        | {{message.body}}
