@@ -12,6 +12,8 @@ export class ThreadListComponent implements OnInit {
 
   @Output() updateThread = new EventEmitter();
 
+  query = ''
+
   constructor() { }
 
   ngOnInit() {

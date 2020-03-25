@@ -1,0 +1,211 @@
+.header-container {
+  height: 74px;
+  background-color: #fff;
+  border-bottom: 1px solid #f1f1f1;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+
+  .header-widget {
+    float: right;
+    padding: 20px;
+
+    .header-search {
+      display: inline-block;
+      margin-right: 30px;
+      position: relative;
+
+      .search-input {
+        border: 0px;
+        border-radius: 3px;
+        background-color: #f3f4f7;
+        height: 32px;
+        padding-left: 25px;
+        width: 200px;
+      }
+
+      .fa {
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        color: #9a9a9a;
+      }
+    }
+
+    .header-notifications {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      display: inline-block;
+
+      .notification-item {
+        display: inline-block;
+        margin: 0px 10px;
+        position: relative;
+
+        .fa {
+          font-size: 20px;
+        }
+
+        .notification-count {
+          background-color: red;
+          border-radius: 50%;
+          padding: 2px 4px;
+          color: #fff;
+          font-size: 6px;
+          position: absolute;
+          left: 8px;
+          top: -3px;
+        }
+      }
+    }
+  }
+}
+
+
+.sidebar-container {
+  width: 248px;
+  border-right: 1px solid #f1f1f1;
+  height: 650px;
+  position: fixed;
+  left: 0px;
+  top: 76px;
+  background-color: #fff;
+
+  .sidebar-links {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+
+    .user-details {
+      .user-img {
+        float: left;
+      }
+
+      .user-info {
+        position: relative;
+        left: 10px;
+        top: 3px;
+
+        .user-name {
+          margin-bottom: 5px;
+        }
+
+        .user-title {
+          text-transform: uppercase;
+          font-size: 10px;
+        }
+      }
+    }
+
+    .sidebar-item {
+      padding: 15px 30px;
+
+      .fa {
+        margin-right: 5px;
+      }
+
+      &.active {
+        background-color: #f7f7ff;
+        border-left: 1px solid #536af8;
+
+        .sidebar-link {
+          color: #536af8;
+        }
+      }
+
+      .sidebar-link {
+        text-decoration: none;
+        color: #4b4b5a;
+      }
+    }
+
+    .nav-section {
+      text-transform: uppercase;
+      font-size: 10px;
+    }
+
+  }
+}
+
+
+// .sidebar-item.active {
+
+// }
+
+.content-container {
+  background-color: #f3f4f7;
+  height: 650px;
+  width: 82%;
+  margin-left: 241px;
+  padding: 30px 0px 0px 30px;
+
+  .title {
+    margin: 10px 0px 30px 0px;
+    font-size: 24px;
+  }
+
+  .task-panel {
+    padding: 15px;
+    border-radius: 3px;
+
+    .add-btn {
+      background-color: #536AF7;
+      padding: 10px 20px 10px 15px;
+      border-radius: 3px;
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+
+      .fa {
+        margin-right: 5px;
+      }
+    }
+
+    .sub-task-panel {
+      margin-top: 45px;
+    }
+
+    .task-table {
+      width: 100%;
+
+      .task-name {
+        width: 200px;
+      }
+
+      tr td {
+        border-bottom: 1px solid #f1f1f1;
+      }
+
+      tr:last-child td {
+        border-bottom: 0px;
+      }
+    }
+
+    .task-board {
+      margin-bottom: 24px;
+      background-color: #fff;
+      border-radius: 2px;
+
+      .task-header {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// n child
+// sa css if may space, parent->child
+// if wala, meaning same element sila
+
+// padding, margin
+// padding = spacing sa loob
+// margin = sa labas
+
+// fixed,absolute,relative
+// positions sa div
+// fixed = fixed
+// absolute = para siyang fixed pero related siya parent div na with position relative
+// relative = relative lang siya sa position nya

@@ -1,12 +1,14 @@
 .container.clearfix
   #people-list.people-list
     thread-list(
-      [threads]="threads",
+      [threads]="newChatRooms",
       [currentThread]="currentThread",
       (updateThread)="updateThread($event)")
     
   .chat
     message-list(
+      *ngIf="!!currentThread && !!messages",
+      [messages]="messages",
       [currentThread]="currentThread",
       [currentUser]="currentUser")
 

@@ -9,6 +9,7 @@ export class MessageListComponent implements OnInit {
 
   @Input() currentThread
   @Input() currentUser
+  @Input() messages
 
   constructor() { }
 
@@ -16,7 +17,7 @@ export class MessageListComponent implements OnInit {
   }
 
   getMessageClass(message) {
-    if (message.creator == this.currentUser.name) {
+    if (message.user_id == this.currentUser.id) {
       return "my-message"
     } else {
       return "other-message float-right"

@@ -26,15 +26,13 @@ export class MessageFormComponent implements OnInit {
 
   submit() {
     let payload = {
-      body: this.form.value.message,
-      date: '3/18/2020',
-      creator: this.currentUser.name
+      body: this.form.value.message
     }
+    this.form.reset()
     this.addMessage.emit(payload)
   }
 
   ngOnInit() {
-    debugger
   }
 
 }
