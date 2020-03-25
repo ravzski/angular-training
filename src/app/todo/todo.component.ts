@@ -9,6 +9,7 @@ export class TodoComponent implements OnInit {
 
   todos = []
   showTodo = true;
+  showAction = false;
 
   constructor() { }
 
@@ -29,6 +30,10 @@ export class TodoComponent implements OnInit {
 
   toggleTodo() {
     this.showTodo = !this.showTodo
+  }
+
+  toggleAction() {
+    this.showAction = !this.showAction
   }
 
 }

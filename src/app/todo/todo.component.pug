@@ -69,20 +69,85 @@
     span Task List
   
   .task-panel
-    .container-fluid
+    .action-panel
       .row
-        .col-md-4
-          .task-board
-            .task-header Todo
+        .col
+          a.add-btn(href="#") Add Task
 
-        .col-md-4
-          .task-board
-            .task-header In Progress
+    //- .row
+    //-   .col-md-3
+    //-     .menu
+
+    //-   .col-md-9
+    //-     .row
+    //-       .col
+    //-         .action
+        
+    //-     .row
+    //-       .col
+    //-         .card
+    //-       .col
+    //-         .card
+    //-       .col
+    //-         .card
+    //-       .col
+    //-         .card
+
+    .row
+      .col-md
+        .task-board
+          .task-header Todo
+
+          .task
+            .task-title Study CSS
+            .task-owner Hardey
+            .date 1/20/2020
+            .action-icon
+              a.action-link((click)="toggleAction()")
+                i.fa.fa-ellipsis-v
+            
+            .action-sheet(*ngIf="showAction")
+              ul.action-list
+                li.action-item
+                  a.action-link(href="#") Edit
+                li.action-item
+                  a.action-link(href="#") Move
+                li.action-item
+                  a.action-link(href="#") Delete
+
+          .task
+            .task-title Study CSS
+            .task-owner Hardey
+            .date 1/20/2020
 
 
-        .col-md-4
-          .task-board
-            .task-header Finish
+      .col-md
+        .task-board
+          .task-header In Progress
+
+          .task
+            .task-title Study CSS
+            .task-owner Hardey
+            .date 1/20/2020
+
+          .task
+            .task-title Study CSS
+            .task-owner Hardey
+            .date 1/20/2020
+
+      .col-md
+        .task-board
+          .task-header Finished
+
+          .task
+            .task-title Study CSS
+            .task-owner Hardey
+            .date 1/20/2020
+
+          .task
+            .task-title Study CSS
+            .task-owner Hardey
+            .date 1/20/2020
 
     //- img.user-img(src="/assets/pic.png")
     

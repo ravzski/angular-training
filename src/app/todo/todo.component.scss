@@ -187,11 +187,77 @@
       margin-bottom: 24px;
       background-color: #fff;
       border-radius: 2px;
+      padding: 15px;
 
       .task-header {
         font-size: 16px;
         font-weight: 600;
       }
+
+      .task {
+        border: 1px solid #f1f1f1;
+        border-radius: 3px;
+        position: relative;
+        padding: 15px;
+        margin: 15px 0px;
+        min-height: 150px;
+
+        .task-title {
+          font-size: 16px;
+        }
+
+        .task-owner {
+          color: #a7a7a7;
+          font-size: 14px;
+        }
+
+        .action-icon {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          font-size: 19px;
+
+          .action-link {
+            color: #333;
+          }
+        }
+
+        .action-sheet {
+          background-color: #fff;
+          width: 120px;
+          border: 1px solid #e2e2e2;
+          position: absolute;
+          top: 25px;
+          right: 15px;
+
+          .action-list {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+
+            .action-item {
+              border-bottom: 1px solid #e2e2e2;
+              padding-left: 10px;
+
+              .action-link {
+                color: #333;
+                font-size: 10px;
+              }
+            }
+          }
+        }
+
+        .date {
+          position: absolute;
+          bottom: 4px;
+          right: 10px;
+          font-size: 10px;
+        }
+      }
+    }
+
+    .action-panel {
+      margin-bottom: 30px;
     }
   }
 }
@@ -209,3 +275,26 @@
 // fixed = fixed
 // absolute = para siyang fixed pero related siya parent div na with position relative
 // relative = relative lang siya sa position nya
+
+// padding
+// margin
+// font-size/color
+
+.menu {
+  background-color: #fff;
+  height: 600px;
+  width: 100%;
+
+}
+
+.action {
+  height: 100px;
+  background-color: #fff;
+  width: 100%;
+}
+
+.card {
+  height: 300px;
+  background-color: #fff;
+  width: 100%;
+}
