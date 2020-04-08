@@ -4,32 +4,54 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ChatComponent } from './chat/chat.component';
-import { ThreadListComponent } from './chat/thread-list/thread-list.component';
-import { MessageListComponent } from './chat/message-list/message-list.component';
-import { MessageFormComponent } from './chat/message-form/message-form.component';
 import { HttpClientModule } from '@angular/common/http';
-import { from } from 'rxjs';
-import { TodoComponent } from './todo/todo.component';
+import {
+   UserGuard,
+   ActiveUserGuard
+} from './services/route-guards/';
+import {
+   SessionService,
+} from './services/api';
+import {
+   HttpService,
+   LocalStorage,
+} from './services/utils';
+
+const ROUTE_GUARDS = [
+   UserGuard,
+   ActiveUserGuard
+];
+
+const APP_SERVICES = [
+   SessionService,
+];
+
+const APP_UTILS = [
+   HttpService,
+   LocalStorage
+];
+
+const APP_MODULES = [
+   BrowserModule,
+   AppRoutingModule,
+   HttpClientModule,
+   FormsModule,
+   ReactiveFormsModule,
+]
 
 
 @NgModule({
    declarations: [
-      AppComponent,
-      ChatComponent,
-      ThreadListComponent,
-      MessageListComponent,
-      MessageFormComponent,
-      TodoComponent
+      AppComponent
    ],
    imports: [
-      BrowserModule,
-      AppRoutingModule,
-      FormsModule,
-      ReactiveFormsModule,
-      HttpClientModule
+      ...APP_MODULES
    ],
-   providers: [],
+   providers: [
+      ...ROUTE_GUARDS,
+      ...APP_SERVICES,
+      ...APP_UTILS,
+   ],
    bootstrap: [
       AppComponent
    ]

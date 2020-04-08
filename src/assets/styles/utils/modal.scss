@@ -1,0 +1,21 @@
+.sp-modal {
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px $shadow;
+  display: block;
+  width: 480px;
+
+  .modal-heading {
+    padding: 15px;
+    color: $white;
+    font-size: 18px;
+
+    &.orange {
+      background-color: $orange;
+    }
+  }
+
+  .modal-body {
+    background-color: $white;
+    padding: 15px;
+  }
+}

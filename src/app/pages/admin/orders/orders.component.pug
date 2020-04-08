@@ -1,0 +1,77 @@
+.row
+  .col-md-9
+    .page-title Order Requests
+    .action-row.row
+      .col
+        .search-content
+          input.search-input(placeholder="search")
+      .col
+        .action-content
+          button.btn.btn-red.btn-xl((click)="newOrder()") Request Order
+
+    .page-table
+      .table-container
+        table.table
+          thead
+            tr
+              th Date
+              th Restaurant
+              th Status
+              th Order Submitted
+              th
+          tbody
+            tr
+              td 02/20/1881
+              td Sample
+              td Sample
+              td Sample
+              td.action-td
+                button.btn.btn-yellow.btn-sm View
+                button.btn.btn-purple.btn-sm Print
+            tr
+              td 02/20/1881
+              td Sample
+              td Sample
+              td Sample
+              td.action-td
+                button.btn.btn-yellow.btn-sm View
+                button.btn.btn-purple.btn-sm Print
+
+  .col-md-3
+    img.side-img(src="assets/images/side.png")
+
+.sp-modal
+  .modal-heading.orange Request Order
+  .modal-body 
+    .form-heading Dinner        
+    .row
+      .col
+        .form-control
+          label Date
+          input.form-control
+      .col
+        .form-control
+          label Time
+          input.form-control
+
+    .form-heading Order Deadline
+    .row
+      .col
+        .form-control
+          label Date
+          input.form-control
+      .col
+        .form-control
+          label Time
+          input.form-control
+    .row
+      .col
+        .form-control
+          label Resto
+          input.form-control
+    
+    .row
+      .col
+        .pull-right
+          button.btn.btn-grey Cancel
+          button.btn.btn-red Send Request

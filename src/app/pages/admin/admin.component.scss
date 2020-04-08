@@ -1,0 +1,65 @@
+@import "../../../assets/styles/utils/colors";
+
+// css caveats
+// to adjust spaces = padding,margin
+// pag ung html ay listahan, always use ul,li
+// para in case magamit ung mga seletor na :first,:last
+// mixings
+
+.sidebar {
+  background-color: $grey;
+  width: 100px;
+  height: 100%;
+  position: fixed;
+
+  .sidebar-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+    .logo-item {
+      text-align: center;
+      padding-top: 15px;
+      padding-bottom: 60px;
+    }
+
+    .nav-item {
+      padding-left: 30px;
+      margin-bottom: 30px;
+      position: relative;
+
+      .food-img {
+        margin-bottom: 7px;
+      }
+
+      &.active {
+        background-color: $white;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        margin-left: 15px;
+        padding-left: 20px;
+      }
+
+      &.nav-footer {
+        position: fixed;
+        bottom: 0;
+      }
+
+      .nav-img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+.active-rad {
+  background-color: $grey;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.main-content {
+  margin-left: 100px;
+  padding: 60px;
+}

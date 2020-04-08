@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ChatComponent } from './chat/chat.component';
-import { TodoComponent } from './todo/todo.component';
-
 
 const routes: Routes = [
-  { path: 'chats', component: ChatComponent },
-  { path: 'todo', component: TodoComponent }
+  { path: 'admin', loadChildren: () => import('./pages/admin/admin.module').then(m => m.AdminModule) },
+  { path: '', loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule) }
 ];
 
 @NgModule({

@@ -1,0 +1,59 @@
+@import "../../../../assets/styles/utils/colors";
+
+.page-title {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.action-row {
+  margin-bottom: 15px;
+
+  .search-input {
+    border: 1px solid $light-grey;
+    border-radius: 3px;
+    width: 300px;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .action-content {
+    text-align: right;
+  }
+}
+
+.page-table {
+  .table-container {
+    border: 1px solid $light-grey;
+    border-radius: 5px;
+  }
+
+  .table {
+    margin: 0px;
+    font-size: 12px;
+
+    th {
+      background-color: $mid-grey;
+      color: #B4B4B4;
+      font-weight: 400;
+      font-size: 12px;
+      border-bottom: 1px solid $light-grey;
+      border-top: 0px;
+    }
+
+    .action-td {
+      width: 200px;
+    }
+
+    td {
+      border-bottom: 1px solid $light-grey;
+    }
+
+    tr:last-child td {
+      border-bottom: 0px;
+    }
+  }
+}
+
+.side-img {
+  width: 100%;
+}

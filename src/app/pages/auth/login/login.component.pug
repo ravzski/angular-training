@@ -1,0 +1,30 @@
+.card
+  .card-body
+    .pdd-horizon-30.pdd-vertical-30
+      .mrg-btm-30
+        h2.inline-block.pull-right.no-mrg-vertical.pdd-top-15 Login
+      p.mrg-btm-15.font-size-13 Please enter your user name and password to login
+      .alert.alert-danger(*ngIf="hasError") {{errorMsg}}
+      form.form-horizontal(
+        '[formGroup]'="form"
+        '(ngSubmit)'="onSubmit(form.value)"
+      )
+        .form-group
+          input#email.form-control(
+            type="email"
+            formControlName="email"
+            placeholder="joe@example.tech"
+            '[ngClass]'="{ 'is-invalid': form.controls.email.touched && form.controls.email.invalid }"
+          )
+        .form-group
+          input#password.form-control(
+            type="password"
+            formControlName="password"
+            placeholder="******"
+            '[ngClass]'="{ 'is-invalid': form.controls.password.touched && form.controls.password.invalid }"
+          )
+        .mrg-top-20.text-right
+          button.btn.btn-info(
+            type="submit"
+            '[disabled]'="form.invalid || loading"
+          ) Login
